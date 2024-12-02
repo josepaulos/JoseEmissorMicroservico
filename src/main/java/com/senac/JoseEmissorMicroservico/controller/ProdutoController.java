@@ -15,11 +15,6 @@ public class ProdutoController {
 
     public ProdutoController(ProdutoService produtoService){this.produtoService=produtoService;}
 
-    @GetMapping(value = "listarProdutos")
-    public ResponseEntity<List<Produto>> ListarProdutos(){
-        List<Produto> produtos = produtoService.listarTodos();
-        return ResponseEntity.ok(produtos);
-    }
 
     @PostMapping(value = "adProduto")
     public ResponseEntity<Produto>AdcionarProduto(@RequestBody Produto produto){

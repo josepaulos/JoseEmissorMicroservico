@@ -16,14 +16,20 @@ public class ProdutoService {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
-    public ProdutoService(ProdutoRepository produtoRepository) {this.produtoRepository =produtoRepository;}
+//    public ProdutoService(ProdutoRepository produtoRepository) {this.produtoRepository =produtoRepository;}
+//
+//    public List<Produto>listarTodos(){
+//        return produtoRepository.findAll();
+//    }
+//    public Produto adcionar(Produto produto){
+//        rabbitTemplate.convertAndSend("fila-produto", produto);
+//        return produtoRepository.save(produto);
+//    }
 
-    public List<Produto>listarTodos(){
-        return produtoRepository.findAll();
-    }
-    public Produto adcionar(Produto produto){
-        rabbitTemplate.convertAndSend("fila-produto", produto);
-        return produtoRepository.save(produto);
+
+    public  Produto adcionar(Produto produto){
+        rabbitTemplate.convertAndSend("fila-ecommerce",produto);
+        return produto;
     }
 
 
