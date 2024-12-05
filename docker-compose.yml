@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
   app:
-    image: JoseEmissorMicroservico:latest  # Nome da imagem do aplicativo Spring Boot
-    container_name: JoseEmissorMicroservico
+    image: joseemissormicroservico:latest  # Nome da imagem do aplicativo Spring Boot
+    container_name: joseemissormicroservico
     build:
       context: .
       dockerfile: Dockerfile
