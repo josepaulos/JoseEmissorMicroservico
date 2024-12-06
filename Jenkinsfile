@@ -53,7 +53,7 @@ pipeline {
 
             		// Parar e remover os containers do mysql e rabbitmq, se estiverem em uso
             		bat "docker stop mysql rabbitmq || exit 0"
-            		bat "docker rm -v mysql rabbitmq || exit 0"
+            		
 
                     // Executar o novo container
                     bat "docker-compose up -d --build"
