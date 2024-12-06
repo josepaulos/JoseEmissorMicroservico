@@ -51,8 +51,7 @@ pipeline {
             		bat "docker stop ${appName} || exit 0"
             		bat "docker rm -v ${appName} || exit 0"  // Remover o container e os volumes associados
 
-            		// Parar e remover os containers do mysql e rabbitmq, se estiverem em uso
-            		bat "docker stop mysql rabbitmq || exit 0"
+            	
             		
 
                     // Executar o novo container
